@@ -1,0 +1,43 @@
+# CanSat Synthetic Dataset Configuration for YOLO
+# Generated aerial earth observation images with synthetic geometric shapes
+# Perfect for CanSat educational object detection training
+
+# Dataset paths
+path: /workspaces/SeyedDataset/synthetic_cansat_dataset  # Root directory
+train: images  # Training images directory (relative to path)
+val: images    # Validation images directory (relative to path)
+test: images   # Test images directory (relative to path)
+
+# Class information
+nc: 3  # Number of classes
+names: 
+  0: square
+  1: circle  
+  2: triangle
+
+# Dataset information
+dataset_info:
+  name: "CanSat Synthetic Training Dataset"
+  description: "Synthetic geometric shapes on aerial earth observation backgrounds"
+  purpose: "Educational CanSat object detection training"
+  total_images: 500
+  background_source: "High-quality aerial earth observation imagery"
+  shape_types: ["square", "circle", "triangle"]
+  image_format: "JPG"
+  annotation_format: "YOLO txt"
+  
+# Training recommendations
+training_config:
+  epochs: 100
+  batch_size: 16
+  image_size: 640
+  learning_rate: 0.01
+  augmentation: true
+  
+# CanSat specific notes
+cansat_notes:
+  - "Shapes simulate objects that might be observed from CanSat altitude"
+  - "Backgrounds are real aerial earth observation images"
+  - "Perfect for educational satellite simulation training"
+  - "Shapes have realistic shadows and perspective distortion"
+  - "Designed for 100-200m altitude simulation"
